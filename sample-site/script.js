@@ -20,3 +20,9 @@ document.querySelectorAll('.copy-script-button').forEach(button => {
         });
     });
 });
+
+document.querySelectorAll('#download').forEach(link => {
+    link.addEventListener('click', () => {
+        window.location.href = 'https://github.com/132magnet/sample-site/releases/latest/download/sample-site.zip';
+    });
+});

@@ -1,10 +1,11 @@
-/* Define color variables */
+/* Define variables */
 body {
-  --color-bg: #f9f7f6; --color-bg-footer: #f2efed;
+  --color-bg: #f9f7f6; --color-bg-header: #f2efed; --color-bg-footer: #f2efed;
   --color-primary: #127aca; --color-primary-hover: #0f65b5;
   --color-gray2: hsl(0, 0%, 75%); --color-gray: hsl(0, 0%, 92%); --color-white: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 16%); --color-text-bold: hsl(0, 0%, 20%);
   --color-link: #378ef0; --color-link-hover: #363636;
+  --max-width: 750px;
 }
 
 /* Global styles */
@@ -16,25 +17,21 @@ body {
 
 /* Centered container */
 .center {
-    padding-top: 40px; padding-bottom: 50px;
-    width: 80%; max-width: 800px;
+    width: 80%; max-width: var(--max-width);
     margin: 0 auto;
 }
 
 /* Button styles */
 button {
-    background-color: var(--color-gray);
-    color: var(--color-text-bold);
+    background-color: var(--color-gray); color: var(--color-text-bold);
     padding: 8px 16px;
-    border: 1px solid var(--color-gray2);
-    border-radius: 5px;
+    border: 1px solid var(--color-gray2); border-radius: 5px;
     cursor: pointer;
     transition: all 0.12s ease;
 }
 button:hover { background-color: var(--color-white); }
 
-/* Primary button styles */
-.primary-button { background-color: var(--color-primary); color: var(--color-white); border: none; }
+.primary-button { background-color: var(--color-primary); color: var(--color-white); border: none; padding: 10 18;}
 .primary-button:hover { background-color: var(--color-primary-hover); }
 
 /* Horizontal line styles */
@@ -42,10 +39,9 @@ hr { border: none; border-top: 1px solid var(--color-gray); margin: 25px 0; }
 
 /* Text styles */
 h1, h2, h3, h4, h5, h6 { color: var(--color-text); margin-top: 20px; margin-bottom: 10px; }
-
+.title { font-size: 2.6rem; }
 a { color: var(--color-link); text-decoration: none; transition: all 0.12s ease; }
 a:hover { color: var(--color-link-hover); cursor: pointer; }
-
 li { margin: 3px 0; }
 
 /* Styles for checkbox inputs */
@@ -56,7 +52,7 @@ input[type="checkbox"] {
     vertical-align: middle;
 }
 
-/* Style for script code blocks */
+/* Styles for script code blocks */
 .script {
     font-family: 'Courier New', Courier, monospace; font-size: 0.9rem;
     background-color: var(--color-gray); border: 1px solid var(--color-gray2);
@@ -73,5 +69,22 @@ input[type="checkbox"] {
     transition: all 0.12s ease;
 }
 
-/* Footer styles */
-.footer { background-color: var(--color-bg-footer); padding: 0; margin: 0; font-size: 0.9rem; }
+/* Styles for images */
+img {
+    max-width: 100%; height: auto;
+    margin: 20px 0;
+    border-radius: 5px; border: 1px solid var(--color-gray);
+}
+
+/* header styles */
+header { background-color: var(--color-bg-header); padding: 10px 0; margin: 0; }
+header .center { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+header h1, h2, h3, h4, h5, h6 { margin: 0; }
+header a { margin-left: 15px; font-size: 1rem; }
+header strong { margin-left: 15px; font-size: 1rem; color: var(--color-text); }
+header strong:hover { cursor: pointer; }
+/* main styles */
+main { margin: 60px 0;}
+/* footer styles */
+footer { background-color: var(--color-bg-footer); padding: 20px 0; margin: 0; }
+footer .center { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
