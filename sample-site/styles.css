@@ -5,7 +5,7 @@ body {
   --color-gray2: hsl(0, 0%, 75%); --color-gray: hsl(0, 0%, 92%); --color-white: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 16%); --color-text-bold: hsl(0, 0%, 20%);
   --color-link: #378ef0; --color-link-hover: #363636;
-  --max-width: 750px;
+  --max-width: 800px;
 }
 
 /* Global styles */
@@ -52,18 +52,26 @@ input[type="checkbox"] {
     vertical-align: middle;
 }
 
+/* Styles for details and summary */
+details { margin: 10px 0; }
+summary { margin: 0; padding: 0; }
+summary h1, summary h2, summary h3, summary h4, summary h5, summary h6 {
+    cursor: pointer; margin: 0; display: inline; vertical-align: middle;
+}
+details .details-content { margin-left: 16px; }
+
 /* Styles for script code blocks */
 .script {
     font-family: 'Courier New', Courier, monospace; font-size: 0.9rem;
     background-color: var(--color-gray); border: 1px solid var(--color-gray2);
     padding: 10px; border-radius: 5px; max-height: 250px;
-    overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;
+    white-space: pre; overflow-x: auto;
     --opacity: 0;
 }
 .script:hover { --opacity: 1.0; }
 
 .copy-script-button {
-    position: relative; float: right;
+    position: absolute;
     margin: 0px; padding: 6px 8px;
     opacity: var(--opacity);
     transition: all 0.12s ease;
@@ -79,12 +87,16 @@ img {
 /* header styles */
 header { background-color: var(--color-bg-header); padding: 10px 0; margin: 0; }
 header .center { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
-header h1, h2, h3, h4, h5, h6 { margin: 0; }
+header h1, header h2, header h3, header h4, header h5, header h6 { margin: 0; }
 header a { margin-left: 15px; font-size: 1rem; }
 header strong { margin-left: 15px; font-size: 1rem; color: var(--color-text); }
 header strong:hover { cursor: pointer; }
 /* main styles */
-main { margin: 60px 0;}
+main { margin: 60px 0; }
 /* footer styles */
 footer { background-color: var(--color-bg-footer); padding: 20px 0; margin: 0; }
 footer .center { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+
+/* fixed header 
+header { width: 100%; position: fixed; top: 0; }
+main { margin: 120px 0 100px 0; }*/

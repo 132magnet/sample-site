@@ -1,3 +1,4 @@
+// Copy for script sections
 document.querySelectorAll('.copy-script-button').forEach(button => {
     button.addEventListener('click', () => {
         const scriptDiv = button.closest('.script');
@@ -21,8 +22,14 @@ document.querySelectorAll('.copy-script-button').forEach(button => {
     });
 });
 
+// Download link functionality
 document.querySelectorAll('#download').forEach(link => {
     link.addEventListener('click', () => {
         window.location.href = 'https://github.com/132magnet/sample-site/releases/latest/download/sample-site.zip';
     });
 });
+
+// Scroll to functionality
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}

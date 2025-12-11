@@ -12,7 +12,7 @@
             <div class="center">
                 <h2>Sample Site</h2>
                 <p>
-                    <strong style="cursor:pointer;" onclick="document.getElementById('getting-started').scrollIntoView({ behavior: 'smooth' });">
+                    <strong style="cursor:pointer;" onclick="scrollToSection('getting-started');">
                         Getting Started
                     </strong>
                     <a href="https://github.com/132magnet/sample-site">Github</a>
@@ -31,10 +31,11 @@
 
                 <p>This is a script section:</p>
                 <div class="script"><button class="copy-script-button">Copy</button>
-{
-    "status": "active",
-    "version": "1.0",
-    "enabled": true
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0; padding: 0;
 }
                 </div>
                 <p>The above Script can be copyed with the Copy Button.</p>
@@ -66,6 +67,23 @@
                     <li><label><input type="checkbox"> Open in your favorite editor</label></li>
                     <li><label><input type="checkbox"> Start using it!</label></li>
                 </ul>
+
+                <hr>
+
+                <details open>
+                    <summary><h2>Collapsable</h2></summary>
+                    <div class="details-content">
+                        <p>This is some content that is revealed by default.</p>
+                    </div>
+                </details>
+                <hr>
+                <details>
+                    <summary><h2>Collapsable</h2></summary>
+                    <div class="details-content">
+                        <p>This is some hidden content with a picture.</p>
+                        <img src="content/placeholder.jpeg" alt="Sample Image" width="400px">
+                    </div>
+                </details>
 
                 <hr>
 
